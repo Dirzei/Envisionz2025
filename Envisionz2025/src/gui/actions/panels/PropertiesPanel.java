@@ -28,6 +28,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 
+import gui.utils.ReadWriteProperties;
+
 public class PropertiesPanel extends JPanel implements ActionListener, FocusListener {
 	/**
 	 * 
@@ -59,6 +61,7 @@ public class PropertiesPanel extends JPanel implements ActionListener, FocusList
 	public PropertiesPanel() {
 		super();
 		this.setLayout(new BorderLayout());
+		ReadWriteProperties rwProps = new ReadWriteProperties();
 		this.map = rwProps.getProperties();
 		
 		this.add(setupPanel(), BorderLayout.CENTER);

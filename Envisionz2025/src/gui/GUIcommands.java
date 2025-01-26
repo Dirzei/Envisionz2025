@@ -12,7 +12,10 @@ import javax.swing.JMenuItem;
 import javax.swing.text.TextAction;
 
 import gui.actions.ExitActionListener;
+import gui.actions.MemoryActionListener;
+import gui.actions.PropertiesActionListener;
 import gui.actions.ResourceReader;
+import gui.actions.ThemeActionListener;
 
 public class GUIcommands extends ResourceReader {
 	private Hashtable<Object, Action> commands;
@@ -21,14 +24,14 @@ public class GUIcommands extends ResourceReader {
 	private Hashtable<String, JMenuItem> menuItems;
 
 	private ExitActionListener exit = new ExitActionListener(this, null);
-	private TestFuncActionListener testFunc = new TestFuncActionListener();
+	//private TestFuncActionListener testFunc = new TestFuncActionListener();
 	private ThemeActionListener theme = new ThemeActionListener(this);
 	private MemoryActionListener memViewAction = new MemoryActionListener(this);
 	private PropertiesActionListener propAction = new PropertiesActionListener(this);
 
 	private Action[] emptyActions = { };
 	//private Action[] defaultActions = { exit };
-	private Action[] defaultActions = { exit, testFunc, theme, memViewAction, propAction };
+	private Action[] defaultActions = { exit, theme, memViewAction, propAction };
 	
 	private GUIframe ownedFrom;
 

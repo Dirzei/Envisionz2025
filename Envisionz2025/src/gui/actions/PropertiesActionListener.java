@@ -6,6 +6,8 @@ import javax.swing.AbstractAction;
 import javax.swing.JOptionPane;
 
 import gui.GUIcommands;
+import gui.actions.panels.PropertiesPanel;
+import gui.utils.ReadWriteProperties;
 
 public class PropertiesActionListener extends AbstractAction {
 	/**
