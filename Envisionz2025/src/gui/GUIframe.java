@@ -64,6 +64,7 @@ public class GUIframe extends MasterFrame {
 		menubar = new GUImenubar(this);
 		this.setJMenuBar(menubar.createMenubar());
 		
+		this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		this.addWindowListener(new WindowClosingAdapter(this));
 		
 		this.setGeneralToolbar(new GUItoolbar(this));

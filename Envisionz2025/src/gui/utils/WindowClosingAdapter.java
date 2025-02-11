@@ -18,7 +18,7 @@ public class WindowClosingAdapter extends WindowAdapter {
 	public WindowClosingAdapter(Object owner, boolean exitSystem) {
 		this.ownedFrom = owner;
 	}
-	public void WindowClosing(WindowEvent event) {
+	public void windowClosing(WindowEvent event) {
 		if (ownedFrom instanceof GUIframe) {
 			ExitActionListener eA = new ExitActionListener(null, (GUIframe)ownedFrom);
 			if (eA.close(new ActionEvent(this, event.getID(), "exit"))) {
